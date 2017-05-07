@@ -1,0 +1,502 @@
+/*
+Theme Name: Sukiyaki Media
+Author: Stefan Dindyal
+Description: The official Sukiyaki Media website.
+Version: 0.1 
+Tags: sukiyaki, media, concepts
+Text Domain: skm 
+*/
+/*CSS Reset*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+*{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+b,strong{font-weight:bold;}
+i,em{font-style:italic;}
+a{
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+ul{list-style:none;}
+/* Start */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: normal;
+	color: #262626;
+	/*background-image: url(images/sev.jpg);*/
+	background-position: top center;
+	background-size: auto 50%;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+body a {
+	color: #666;
+}
+h1 {
+	font-weight: 400;
+}
+/*General Styles*/
+#page {
+	position: relative;
+	width: 100%;
+	padding-top: 120px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.header-image #page {
+	padding-top: 55px;
+}
+.header-image-box {
+	background-color: #000;
+	border-bottom: 3px solid purple;
+	margin-bottom: 0px;
+}
+.header-image-box img {
+	display: block;
+	margin: 0 auto 0;
+	max-width: 100%;
+	height: auto;
+}
+#header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	font-size: 32px;
+	line-height: 0;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 75px;
+	height: 55px;
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+}
+.admin-bar #header {
+	top: 32px;
+}
+#footer {
+	font-size: 12px;
+	padding: 20px 10px;
+	text-align: center;
+	/*box-shadow: 0 -3px 3px rgba(0,0,0,0.10);*/
+	background-color: #fff;
+}
+#logo {
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;
+	display: inline-block;
+	height: 1em;
+	line-height: 1em;
+	color: #2c2356;
+}
+.icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.75em;
+	height: 0.75em;
+	margin: 0 0.1em;
+	margin-top: 0.5em;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.icon i {
+	position: absolute;
+	width: 0.25em;
+	height: 0.25em;
+	background: #555;
+	border-radius: 0.25em;
+	display: block;
+}
+.icon i.r {
+	background: #ff4747;
+	top: 0;
+	left: 0;
+	background: #ff2020;
+}
+.icon i.g {
+	background: #a0e534;
+	top: 0;
+	right: 0;	
+}
+.icon i.b {
+	background: #3020ff;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);	
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#main-content {
+	padding: 0 10px;
+}
+section {
+	position: relative;
+	/*padding: 0 10px 10px;*/
+	width: 100%;
+	/*max-width: 960px;*/
+	margin: 0 auto;
+	margin-bottom: 40px;
+	text-align: center;
+}
+section.b,
+section.b h2.section-title {
+	border-color: #a0e534;
+}
+section h2.section-title {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 22px;
+	padding: 10px 20px;
+	margin: 0 auto 20px;
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	border-top: 3px solid;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+}
+
+/*Header Image*/
+#header {}
+#image-header {
+	height: 480px;
+	margin-bottom: 60px;
+	background-color: #010101;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+#image-header img {
+	display: block;
+	width: auto;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*Our Works*/
+#works {
+	/*max-width: 100%;*/
+	/*padding-left: 0;*/
+	/*padding-right: 0;*/
+}
+#works .section-title {
+	margin-top: -16px;
+	margin-bottom: 32px;
+}
+#works .large-img {
+	/*float: left;*/
+	max-width: 480px;
+	width: 100%;
+	height: 480px;
+	margin: 0 auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	box-shadow: 3px 0px 9px rgba(0,0,0,0.1);
+	/*background-color: #202020;*/
+	/*border-top: 3px solid #ff4747;*/
+	/*border-bottom: 3px solid #3020ff;*/
+}
+#works .wod {
+	border-top: 3px solid #3020ff;
+}
+#works .ew {
+	border-top: 3px solid #ff4747;
+}
+#works .el {
+	border-top: 3px solid #a0e534;
+}
+#works .wod .large-img {
+	background-image: url(images/test.jpg);
+}
+#works .ew .large-img {
+	background-image: url(images/ew.jpg);
+}
+#works .el .large-img {
+	background-image: url(images/break.jpg);
+}
+#works .contents span {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #2c2356;
+	padding: 0px 0;
+}
+#works p {
+	margin-bottom: 10px;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	display: none;
+}
+#works em {
+	color: #634288;
+}
+#works em.note {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	padding: 10px 0 0;
+}
+#works .gallery {
+	margin-bottom: 0px;
+	display: none;
+}
+.story {
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.story > li {
+	width: 31%;
+	margin: 0 1%; 
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: normal;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+	overflow: hidden;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+.story > li:last-child {
+	margin-right: 0;
+	margin-bottom: 0;
+}
+.story ul li {
+	padding: 0 0 40px;
+}
+.story > li .disc {
+	width: 100%;
+	/*float: right;*/
+	padding: 20px 20px;
+	position: relative;
+	/*height: 480px;*/
+	display: inline-table;
+}
+.story > li .disc .helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.story > li .disc .contents {
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+}
+
+/*About Us*/
+#about {
+	max-width: 960px;
+	margin-bottom: 40px;
+	display: none;
+}
+#about .ico {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	font-size: 64px;
+	line-height: 108px;
+	margin: 0 auto 20px;
+	border: 1px solid #eee;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+}
+#about #us {
+	text-align: left;
+	margin-bottom: 60px;
+	width: 100%;
+	padding: 20px 20px 10px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);	
+	background-color: #fff;
+}
+.pre #about #us {
+	text-align: center;
+}
+.pre #about #us a {
+	color: #3b5998;
+}
+.pre #about #us a:hover {
+	text-decoration: underline;
+}
+#about #us p,
+#about #us > div {
+	text-align: center;
+}
+#about #us p {
+	margin-bottom: 10px;
+}
+#about #us > div {
+	margin-bottom: 40px;
+}
+#about #us p a {
+	font-weight: bold;
+	color: #3b5998;
+}
+#about #us p a:hover {
+	text-decoration: underline;
+}
+
+/*Memebers*/
+#members {
+	font-size: 0;
+	line-height: 0;
+	text-align: left;
+}
+#members > li {
+	width: 100%;
+	display: inline-block;
+	margin: 0 0 60px;
+	margin-right: 0%;
+	padding: 20px 20px 10px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+	font-size: 16px;
+	line-height: normal;
+	vertical-align: top;
+	background-color: #fff;
+}
+#members > li:last-child {
+	margin-right: 0;
+	margin-bottom: 0;
+}
+#members > li.caleb {
+	border-top: 3px solid #3020ff;
+}
+#members > li.mark {
+	border-top: 3px solid #ff4747;
+}
+#members > li.stefan {
+	border-top: 3px solid #a0e534;
+}
+#members .avatar {
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	margin: 0 auto 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.10);
+}
+#members .caleb .avatar {
+	background-image: url(images/geck.jpg);
+}
+#members .mark .avatar {
+	background-image: url(images/wolf.jpg);
+}
+#members .stefan .avatar {
+	background-image: url(images/bird.jpg);
+}
+#members li > span {
+	font-weight: 600;
+	font-size: 22px;
+	color: #2c2356;
+	display: block;
+	text-align: center;
+}
+#members p {
+	text-align: left;
+	margin-bottom: 30px;
+	padding-top: 10px;
+}
+#members strong {
+	display: block;
+	text-align: center;
+}
+#members li ul {
+	margin-bottom: 40px;
+	text-align: center;
+}
+#members li ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 5px;
+	color: #634288;
+	vertical-align: top;
+}
+#members li ul li span {
+	font-weight: bold;
+	display: inline-block;
+}
+
+/*Portfolio*/
+.port ul {
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+.port ul li {
+	width: 300px;
+	float: left;
+	margin: 10px 0;
+	opacity: 0.75;
+	transition: 0.3s ease-in-out;
+}
+.port #works ul li span.title {
+	outline: none;
+	border-bottom: 3px solid #fff;
+	display: inline-block;
+	transition: 0.3s ease-in-out;
+	padding: 5px;
+}
+.port #works ul li:hover span.title {
+	border-bottom: 3px solid #2c2356;
+}
+.port #works ul li .hi {
+	display: block;
+	height: 225px;
+	overflow: hidden;
+	padding: 0;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}
+.port ul li:hover {
+	opacity: 1;
+}
+.port ul li:nth-child(2) {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.port ul li:nth-child(5) {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.port ul li img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.clear {
+	clear: both;
+}
+@media screen and (max-width: 768px) {
+	#works .large-img {
+		width: 100%;
+		max-width: 100%;
+		height: 320px;
+	}
+	.story > li .disc {
+		width: 100%;
+		height: auto;
+	}
+}
